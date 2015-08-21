@@ -1,0 +1,73 @@
+
+
+.mainForm {
+  margin: 50px auto;
+  width: 700px;
+  padding: 40px;
+  background: #eeeeff;
+  border: 1px solid #aaaaff;
+  overflow: hidden;
+}
+
+.tagsInput {
+  width: 100%;
+  position: relative;
+}
+
+.tagsInput__field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaaaff;
+  font-size: 24px;
+}
+
+.tagsInput__field-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  opacity: 0.3;
+  font-size: 24px;
+}
+
+.tagsInput__hints {
+  position: relative;
+  margin-top: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #aaaaff;
+  border-top: 0;
+  overflow: hidden;
+}
+
+.tagsInput__hint {
+  @extend .tag;
+  cursor: pointer;
+}
+
+.tagsList {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid #aaaaff;
+}
+
+.tag {
+  font-size: 18px;
+  padding: 7px;
+  margin: 5px;
+  color: #ffffff;
+  background: #9999ff;
+  display: inline-block;
+}
+
+.tag__remove-icon {
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.save-btn, .load-btn {
+  margin-top: 10px;
+  margin-left: 10px;
+}

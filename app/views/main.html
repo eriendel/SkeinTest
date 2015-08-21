@@ -1,0 +1,21 @@
+<div class="mainForm">
+    <div class="tagsInput">
+        <input class="tagsInput__field" placeholder="Hashtag" type="text" ng-keyup="refreshHints()" ng-model="tagField"/>
+        <span class="glyphicon glyphicon-search tagsInput__field-icon" aria-hidden="true"></span>
+        <div class="tagsInput__hints" ng-show="hints.length > 0">
+            <div ng-repeat="hint in hints" class="tagsInput__hint" ng-click="addTag(hint)">{{hint}}</div>
+        </div>
+    </div>
+    <div class="tagsList" ng-show="tags.length > 0">
+        <div ng-repeat="tag in tags" class="tag">
+            {{tag}}
+            <span class="glyphicon glyphicon-remove tag__remove-icon" aria-hidden="true" ng-click="removeTag(tag)"></span>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default btn-lg pull-right save-btn" ng-click="saveTags()">
+        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save tags
+    </button>
+    <button type="button" class="btn btn-default btn-lg pull-right load-btn" ng-click="loadTags()">
+        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Load tags
+    </button>
+</div>
